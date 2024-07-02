@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Header from "@/components/header/Header"
 
 export const metadata = {
   title: 'Next.js',
@@ -9,11 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div>
-          <Link href="/dashboard">Dashboard</Link>&nbsp;
-          <Link href="/about">About</Link>&nbsp;
-          <Link href="/products#sample">Products</Link>&nbsp;
-        </div>
+        <Header />
         {children}
         </body>
     </html>
