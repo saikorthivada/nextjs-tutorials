@@ -1,16 +1,20 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from './Header.module.css';
 
 function Header() {
-  const [count, setCount] = useState(0);
-  console.log('header');
+  const path = usePathname();
+
+  const getActiveClass = (input) => {
+    const isActive = path.includes(input);
+    return isActive ? styles.active : styles.inactive;
+  }
   return (
         <div>
-          <Link className={styles.active} style={{color: 'green'}} href="/dashboard">Dashboard</Link>&nbsp;
-          <Link className={styles.inactive} href="/about">About</Link>&nbsp;
-          <Link className={styles.inactive} href="/products#sample">Products</Link>&nbsp;
+          <Link className={getActiveClass('dashboard')} href="/dashboard">Dashboard</Link>&nbsp;
+          <Link className={getActiveClass('about')}  href="/about">About</Link>&nbsp;
+          <Link className={getActiveClass('products')}  href="/products#sample">Products</Link>&nbsp;
         </div>
   )
 }
