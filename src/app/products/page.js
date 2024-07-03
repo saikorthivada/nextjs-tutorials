@@ -1,6 +1,7 @@
+
 export default function Products() {
     return (
-        <div>
+        <div className='main'>
             <h1>Products route</h1>
             <h1>Products route</h1>
             <h1>Products route</h1>
