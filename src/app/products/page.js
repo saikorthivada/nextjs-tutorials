@@ -1,41 +1,10 @@
+import Link from "next/link";
 
 export default function Products() {
     return (
         <div className='main'>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-
-            <h1 id="sample">Products route sample</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
-            <h1>Products route</h1>
+            <Link href={'/products/product-details'}>Product 1 Details</Link>&nbsp;
+            <Link href={'/products/product-details'}>Product 2 Details</Link>
         </div>
     )
 }
