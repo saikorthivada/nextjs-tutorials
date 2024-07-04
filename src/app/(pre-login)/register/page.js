@@ -1,5 +1,11 @@
+import Button from "@/components/button/Button";
+
 export default function RegisterUI() {
+
     return (
-        <h1>Register component</h1>
+        <div>
+            <h1>Register component</h1>
+            <Button />
+        </div>
     )
 }
