@@ -7,7 +7,7 @@ export default function PostLoginLayout({children}) {
     const [count, setCount] = useState(0);
     return (
         <div>
-            <h5>Layout</h5>
+            <h5>Template</h5>
             Count - {count}
             <div>
             <button onClick={() => setCount(count + 1)}>Increment</button>
