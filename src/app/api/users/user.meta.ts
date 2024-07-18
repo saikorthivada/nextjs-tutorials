@@ -1,10 +1,12 @@
 export const Users = [
     {
         id: 1,
-        name: 'sai'
+        name: 'sai',
+        caption: "Sai is a software engineer"
     },
     {
         id: 2,
-        name: 'kumar'
+        name: 'kumar',
+        caption: "Kumar is a software Architect"
     }
 ]
