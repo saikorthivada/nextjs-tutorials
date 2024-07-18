@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Users } from "./user.meta";
 
-export async function GET() {
-    return new Response(JSON.stringify(Users), {
+export async function GET(req: NextRequest) {
+    const filter = req.nextUrl.searchParams.get('filter');
+    console.log(filter);
+    let finalUsers = Users;
+    if (filter) {
+        finalUsers = Users.filter((obj) => obj.name.includes(filter));
+    }
+    return new Response(JSON.stringify(finalUsers), {
         headers: {
             "content-type":"application/json"
         },

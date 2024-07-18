@@ -24,7 +24,6 @@ export async function GET(_: NextRequest, {params}: {params:{id: string}}) {
    
 }
 
-
 export async function PATCH(req: NextRequest, {params}: {params: {id: string}}) {
     const id = +params.id;
     const payload = await req.json();
