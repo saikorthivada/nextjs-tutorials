@@ -76,3 +76,22 @@ export async function PUT(req: NextRequest, {params}: {params: {id: string}}) {
 }
 
 
+export async function DELETE(_: NextRequest, {params}: {params: {id: string}}) {
+    const id = +params.id;
+    const index = Users.findIndex((obj) => obj.id === id);
+    if (index !== -1) {
+        Users.splice(index, 1);
+        return new Response(JSON.stringify(`${id} has been deleted successfully`), {
+            status: 200,
+            statusText: 'Successfully deleted'
+        })
+    } else {
+        return new Response(JSON.stringify(null), {
+            headers: {
+                "content-type": "application/json"
+            },
+            status: 404,
+            statusText: 'id does not found'
+           })
+    }
+}
